@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> 
+        <div class="header-content">
+            <h1>Web-Store</h1>
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button>Sign up</button>
+        </div>
+    </header>
+
+    <main id="productContainer">
+
+        <div class="product-card" data-name="Laptop" data-id="1">
+            <img src="images/laptop.jpg" alt="Laptop">
+            <h3>Modern Laptop</h3>
+            <p class="price">$1200.00</p>
+            <button class="details-button" data-id="1">View Details</button>
+        </div>
+
+        <div class="product-card" data-name="Coffee Maker" data-id="2">
+            <img src="images/coffee-maker.jpg" alt="Coffee Maker">
+            <h3>Espresso Machine</h3>
+            <p class="price">$250.00</p>
+            <button class="details-button" data-id="2">View Details</button>
+        </div>
+
+        <div class="product-card" data-name="T-Shirt" data-id="3">
+            <img src="images/tshirt.jpg" alt="T-Shirt">
+            <h3>Organic Cotton Tee</h3>
+            <p class="price">$35.00</p>
+            <button class="details-button" data-id="3">View Details</button>
+        </div>
+
+        <div class="product-card" data-name="Headphones" data-id="4">
+            <img src="images/headphones.jpg" alt="Noise Cancelling Headphones">
+            <h3>Wireless Headphones</h3>
+            <p class="price">$199.99</p>
+            <button class="details-button" data-id="4">View Details</button>
+        </div>
+
+        <div class="product-card" data-name="Blender" data-id="5">
+            <img src="images/blender.jpg" alt="High-Speed Blender">
+            <h3>High-Power Blender</h3>
+            <p class="price">$90.00</p>
+            <button class="details-button" data-id="5">View Details</button>
+        </div>
+
+        <div class="product-card" data-name="Notebook" data-id="6">
+            <img src="images/notebook.jpg" alt="A5 Lined Notebook">
+            <h3>Professional Notebook</h3>
+            <p class="price">$15.50</p>
+            <button class="details-button" data-id="6">View Details</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Web-Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
