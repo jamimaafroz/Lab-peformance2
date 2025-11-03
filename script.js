@@ -31,24 +31,27 @@ const productDetails = {
     }
 };
 
-const searchInput = document.getElementById('searchInput');
+const searchInput = document.getElementById('search-input');
 const productCards = document.querySelectorAll('.product-card');
-
-searchInput.addEventListener('input', (e) => {
-    const searchTerm = e.target.value.toLowerCase();
-
-    productCards.forEach(card => {
-        const productName = card.getAttribute('data-name').toLowerCase();
-
-        if (productName.includes(searchTerm)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-});
-
 const detailButtons = document.querySelectorAll('.details-button');
+
+let cartItemCount = 0;
+
+if (searchInput) {
+    searchInput.addEventListener('keyup', (e) => {
+        const searchTerm = e.target.value.toLowerCase().trim();
+
+        productCards.forEach(card => {
+            const productName = card.querySelector('h3').textContent.toLowerCase();
+
+            if (productName.includes(searchTerm)) {
+                card.style.display = 'grid';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+}
 
 detailButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -69,5 +72,28 @@ detailButtons.forEach(button => {
         } else {
             alert("Sorry, details for this product are currently unavailable.");
         }
+    });
+});
+
+function updateCartDisplay() {
+    const cartDisplay = document.getElementById('cart-count');
+    if (cartDisplay) {
+        cartDisplay.textContent = cartItemCount;
+    }
+    
+    console.log(`Cart updated! Total items: ${cartItemCount}`);
+}
+
+detailButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        
+        cartItemCount += 1;
+        updateCartDisplay();
+        
+        e.target.textContent = 'Added!';
+        setTimeout(() => {
+            e.target.textContent = 'View Details';
+        }, 500);
     });
 });

@@ -24,17 +24,86 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 20px;
 }
 
-#searchInput {
+.header-content .logo {
+    text-decoration: none;
+    color: white;
+}
+
+.header-content .logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.search-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#search-input {
     padding: 8px 15px;
     border: none;
     border-radius: 20px;
     width: 300px;
     font-size: 16px;
+    flex-grow: 1;
+    background: none;
+    color: #333;
+    outline: none;
 }
 
-header button {
+.search-button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 2px;
+}
+
+.search-button:hover {
+    background-color: #1e7e34;
+}
+
+.signup-button {
     padding: 8px 20px;
     border: 2px solid white;
     background-color: transparent;
@@ -42,10 +111,57 @@ header button {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 10px;
 }
 
-header button:hover {
+.signup-button:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 50px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-heading {
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.store-tagline {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.store-introduction p {
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #ffc107;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
 }
 
 #productContainer {
