@@ -1,52 +1,95 @@
 {
-  "1": {
-    "name": "Modern Laptop",
-    "description": "A high-performance laptop with 16GB RAM, 512GB SSD, and a stunning 4K display. Ideal for coding and design work.",
-    "specs": "15-inch, Intel i7, 1.8kg"
-  },
-  "2": {
-    "name": "Espresso Machine",
-    "description": "Professional-grade espresso machine with a built-in grinder and steam wand. Brews perfect shots every time.",
-    "specs": "15-bar pump, Stainless Steel, 1.7L Tank"
-  },
-  "3": {
-    "name": "Organic Cotton Tee",
-    "description": "Soft, breathable t-shirt made from 100% certified organic cotton. Available in multiple colors and sizes.",
-    "specs": "180 gsm fabric, Crew Neck, Eco-friendly dye"
-  },
-  "4": {
-    "name": "Wireless Headphones",
-    "description": "Industry-leading noise cancellation headphones with a 30-hour battery life. Perfect for travel and focus.",
-    "specs": "Bluetooth 5.0, Active Noise Cancelling, USB-C Charging"
-  },
-  "5": {
-    "name": "High-Power Blender",
-    "description": "A kitchen essential with a powerful motor, ideal for smoothies, soups, and crushing ice in seconds.",
-    "specs": "1500W Motor, 64 oz Jar, Pulse Function"
-  },
-  "6": {
-    "name": "Professional Notebook",
-    "description": "A sleek A5 notebook with lined pages and a durable hard cover. Perfect for notes, journaling, or lab reports!",
-    "specs": "200 Pages, A5 Size, Lay-flat binding"
-  },
-  "7": {
-    "name": "Smart Home Hub",
-    "description": "Central control unit for all smart devices in your home. Compatible with all major voice assistants and protocols.",
-    "specs": "Wi-Fi, Bluetooth, Zigbee, Ethernet Port"
-  },
-  "8": {
-    "name": "Portable Power Bank",
-    "description": "Ultra-slim, high-capacity power bank to charge your phone and tablet multiple times. Features fast-charging technology.",
-    "specs": "20,000 mAh, Dual USB-A Output, PD 3.0"
-  },
-  "9": {
-    "name": "Waterproof Backpack",
-    "description": "Durable and completely waterproof backpack with a roll-top design and padded laptop sleeve. Ideal for commuting and hiking.",
-    "specs": "25L Capacity, PVC Material, Ergonomic Straps"
-  },
-  "10": {
-    "name": "Digital Drawing Tablet",
-    "description": "Pressure-sensitive tablet with a large active area and battery-free stylus. Essential tool for digital artists and illustrators.",
-    "specs": "10x6 inch Active Area, 8192 Pressure Levels, USB-C"
-  }
+  "status": true,
+  "data": [
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 13 mini",
+      "slug": "apple_iphone_13_mini-11104",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 13 Pro",
+      "slug": "apple_iphone_13_pro-11102",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 13 Pro Max",
+      "slug": "apple_iphone_13_pro_max-11089",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 13",
+      "slug": "apple_iphone_13-11103",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 12 Pro Max",
+      "slug": "apple_iphone_12_pro_max-10237",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro-max-.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 12 Pro",
+      "slug": "apple_iphone_12_pro-10508",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 12",
+      "slug": "apple_iphone_12-10509",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 12 mini",
+      "slug": "apple_iphone_12_mini-10510",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-mini.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone SE (2020)",
+      "slug": "apple_iphone_se_(2020)-10170",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2020.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 11 Pro Max",
+      "slug": "apple_iphone_11_pro_max-9846",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 11 Pro",
+      "slug": "apple_iphone_11_pro-9847",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro-max-.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone 11",
+      "slug": "apple_iphone_11-9848",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone XS Max",
+      "slug": "apple_iphone_xs_max-9319",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-max-new1.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone XR",
+      "slug": "apple_iphone_xr-9320",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xr-new.jpg"
+    },
+    {
+      "brand": "Apple ",
+      "phone_name": "iPhone XS",
+      "slug": "apple_iphone_xs-9318",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-xs-new.jpg"
+    }
+  ]
 }
