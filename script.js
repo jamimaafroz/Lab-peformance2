@@ -2,20 +2,31 @@ const heroSection = document.querySelector(".hero-section");
 const searchInput = document.getElementById("search-input");
 const searchButton = document.querySelector(".search-button");
 
+
 searchButton.addEventListener("click", () => {
   const text = searchInput.value.toLowerCase().trim();
-   heroSection.style.display = "none";
-     const products = document.querySelectorAll(".product-card");
-     products.forEach((product) => {
-     const name = product.querySelector("h3").textContent.toLowerCase();
+  const products = document.querySelectorAll(".product-card");
+  const loading = document.querySelector(".loading");
 
-     if (name.includes(text)) {
-      product.style.display = "block";
-    } else {
-      product.style.display = "none";
-    }
-  });
+  if (text === "") {
+    loading.style.display = "none";
+    heroSection.style.display = "block";
+    products.forEach(product => product.style.display = "block");
+    return;
+  }
+
+  loading.style.display = "block";
+  heroSection.style.display = "none";
+
+  setTimeout(() => {
+    products.forEach(product => {
+      const name = product.querySelector("h3").textContent.toLowerCase();
+      product.style.display = name.includes(text) ? "block" : "none";
+    });
+    loading.style.display = "none";
+  }, 500);
 });
+
 
 let productsData = {};
 
