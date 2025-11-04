@@ -1,0 +1,52 @@
+{
+  "1": {
+    "name": "Modern Laptop",
+    "description": "A high-performance laptop with 16GB RAM, 512GB SSD, and a stunning 4K display. Ideal for coding and design work.",
+    "specs": "15-inch, Intel i7, 1.8kg"
+  },
+  "2": {
+    "name": "Espresso Machine",
+    "description": "Professional-grade espresso machine with a built-in grinder and steam wand. Brews perfect shots every time.",
+    "specs": "15-bar pump, Stainless Steel, 1.7L Tank"
+  },
+  "3": {
+    "name": "Organic Cotton Tee",
+    "description": "Soft, breathable t-shirt made from 100% certified organic cotton. Available in multiple colors and sizes.",
+    "specs": "180 gsm fabric, Crew Neck, Eco-friendly dye"
+  },
+  "4": {
+    "name": "Wireless Headphones",
+    "description": "Industry-leading noise cancellation headphones with a 30-hour battery life. Perfect for travel and focus.",
+    "specs": "Bluetooth 5.0, Active Noise Cancelling, USB-C Charging"
+  },
+  "5": {
+    "name": "High-Power Blender",
+    "description": "A kitchen essential with a powerful motor, ideal for smoothies, soups, and crushing ice in seconds.",
+    "specs": "1500W Motor, 64 oz Jar, Pulse Function"
+  },
+  "6": {
+    "name": "Professional Notebook",
+    "description": "A sleek A5 notebook with lined pages and a durable hard cover. Perfect for notes, journaling, or lab reports!",
+    "specs": "200 Pages, A5 Size, Lay-flat binding"
+  },
+  "7": {
+    "name": "Smart Home Hub",
+    "description": "Central control unit for all smart devices in your home. Compatible with all major voice assistants and protocols.",
+    "specs": "Wi-Fi, Bluetooth, Zigbee, Ethernet Port"
+  },
+  "8": {
+    "name": "Portable Power Bank",
+    "description": "Ultra-slim, high-capacity power bank to charge your phone and tablet multiple times. Features fast-charging technology.",
+    "specs": "20,000 mAh, Dual USB-A Output, PD 3.0"
+  },
+  "9": {
+    "name": "Waterproof Backpack",
+    "description": "Durable and completely waterproof backpack with a roll-top design and padded laptop sleeve. Ideal for commuting and hiking.",
+    "specs": "25L Capacity, PVC Material, Ergonomic Straps"
+  },
+  "10": {
+    "name": "Digital Drawing Tablet",
+    "description": "Pressure-sensitive tablet with a large active area and battery-free stylus. Essential tool for digital artists and illustrators.",
+    "specs": "10x6 inch Active Area, 8192 Pressure Levels, USB-C"
+  }
+}

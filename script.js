@@ -1,99 +1,55 @@
-const productDetails = {
-    1: {
-        name: "Modern Laptop",
-        description: "A high-performance laptop with 16GB RAM, 512GB SSD, and a stunning 4K display. Ideal for coding and design work.",
-        specs: "15-inch, Intel i7, 1.8kg"
-    },
-    2: {
-        name: "Espresso Machine",
-        description: "Professional-grade espresso machine with a built-in grinder and steam wand. Brews perfect shots every time.",
-        specs: "15-bar pump, Stainless Steel, 1.7L Tank"
-    },
-    3: {
-        name: "Organic Cotton Tee",
-        description: "Soft, breathable t-shirt made from 100% certified organic cotton. Available in multiple colors and sizes.",
-        specs: "180 gsm fabric, Crew Neck, Eco-friendly dye"
-    },
-    4: {
-        name: "Wireless Headphones",
-        description: "Industry-leading noise cancellation headphones with a 30-hour battery life. Perfect for travel and focus.",
-        specs: "Bluetooth 5.0, Active Noise Cancelling, USB-C Charging"
-    },
-    5: {
-        name: "High-Power Blender",
-        description: "A kitchen essential with a powerful motor, ideal for smoothies, soups, and crushing ice in seconds.",
-        specs: "1500W Motor, 64 oz Jar, Pulse Function"
-    },
-    6: {
-        name: "Professional Notebook",
-        description: "A sleek A5 notebook with lined pages and a durable hard cover. Perfect for notes, journaling, or lab reports!",
-        specs: "200 Pages, A5 Size, Lay-flat binding"
+const heroSection = document.querySelector(".hero-section");
+const searchInput = document.getElementById("search-input");
+const searchButton = document.querySelector(".search-button");
+
+searchButton.addEventListener("click", () => {
+  const text = searchInput.value.toLowerCase().trim();
+   heroSection.style.display = "none";
+     const products = document.querySelectorAll(".product-card");
+     products.forEach((product) => {
+     const name = product.querySelector("h3").textContent.toLowerCase();
+
+     if (name.includes(text)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
     }
-};
-
-const searchInput = document.getElementById('search-input');
-const productCards = document.querySelectorAll('.product-card');
-const detailButtons = document.querySelectorAll('.details-button');
-
-let cartItemCount = 0;
-
-if (searchInput) {
-    searchInput.addEventListener('keyup', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim();
-
-        productCards.forEach(card => {
-            const productName = card.querySelector('h3').textContent.toLowerCase();
-
-            if (productName.includes(searchTerm)) {
-                card.style.display = 'grid';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    });
-}
-
-detailButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const productId = e.target.getAttribute('data-id');
-        const item = productDetails[productId];
-
-        if (item) {
-            const message = 
-                `--- ${item.name} Details ---
-                
-                Description: ${item.description}
-                
-                Key Specs: ${item.specs}
-                
-                Product ID: ${productId}`;
-
-            alert(message);
-        } else {
-            alert("Sorry, details for this product are currently unavailable.");
-        }
-    });
+  });
 });
 
-function updateCartDisplay() {
-    const cartDisplay = document.getElementById('cart-count');
-    if (cartDisplay) {
-        cartDisplay.textContent = cartItemCount;
+let productsData = {};
+
+fetch("products.json")
+
+  .then((response) => {
+    if (!response.ok) throw new Error("Failed to fetch JSON data");
+    return response.json();
+  })
+  .then((data) => {
+    productsData = data;
+  })
+  .catch((error) => console.error("Error loading products:", error));
+
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("details-button")) {
+    const productId = e.target.dataset.id;
+
+    if (productsData[productId]) {
+      const item = productsData[productId];
+      showProductDetails(item);
+    } else {
+      alert("Product details not found!");
     }
+  }
+});
+
+function showProductDetails(product) {
+  const details = `
+    ${product.name}
+    ${product.description}
     
-    console.log(`Cart updated! Total items: ${cartItemCount}`);
+    Specs: ${product.specs}
+  `;
+  alert(details);
 }
-
-detailButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        
-        cartItemCount += 1;
-        updateCartDisplay();
-        
-        e.target.textContent = 'Added!';
-        setTimeout(() => {
-            e.target.textContent = 'View Details';
-        }, 500);
-    });
-});
